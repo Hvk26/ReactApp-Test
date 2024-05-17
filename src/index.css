@@ -1,0 +1,13 @@
+
+.card{
+    width: 500px;
+    border: 10px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+.cardimg{
+    border-radius: 60%;
+}
+
