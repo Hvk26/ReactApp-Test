@@ -6,13 +6,13 @@ function Button(){
         backgroundColor: "brown"       
     }
 
-    const eventHandler = ()=>console.log("Ouch!!");
+    // e is an event object
 
-    const eventHandler2 =(name)=>{
-        console.log(`${name} don't click me`);
+    const eventHandler =(e)=>{
+        e.target.textContent = "OUCH!!";
     }
     return(
-        <button style={styles} onClick={()=>eventHandler2("HVK")}>Click me</button>
+        <button style={styles} onClick={(e)=>eventHandler(e)}>Click me</button>
     );
 }
 
