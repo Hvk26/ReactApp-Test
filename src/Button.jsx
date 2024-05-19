@@ -7,8 +7,12 @@ function Button(){
     }
 
     const eventHandler = ()=>console.log("Ouch!!");
+
+    const eventHandler2 =(name)=>{
+        console.log(`${name} don't click me`);
+    }
     return(
-        <button style={styles} onClick={eventHandler}>Click me</button>
+        <button style={styles} onClick={()=>eventHandler2("HVK")}>Click me</button>
     );
 }
 
