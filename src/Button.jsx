@@ -5,9 +5,10 @@ function Button(){
         borderRadius: "5px",
         backgroundColor: "brown"       
     }
-    
+
+    const eventHandler = ()=>console.log("Ouch!!");
     return(
-        <button style={styles}>Click me</button>
+        <button style={styles} onClick={eventHandler}>Click me</button>
     );
 }
 
