@@ -1,26 +1,20 @@
 import React, {useState} from 'react';
 
 function MyComponent(){
+    
+    // declaring different states
+    const [name, nameChange] = useState("Guest");
 
-    const[name, setName] = useState("Guest");
-    const[age, setAge] = useState(0);
 
-    const updateName = () =>{
-        setName("HVK");
-    }
-
-    const increamentAge = () =>{
-        setAge(age + 1);
+    // declaring different function
+    const nameHandler = ()=>{
+        nameChange(event.target.value);
     }
 
     return(<div>
-        <p>Name: {name}</p>
-        <button onClick={updateName}>Set Name</button>
-
-        <p>Age: {age}</p>
-        <button onClick={increamentAge}>Set Name</button>
+       <input type="text" value={name} onChange={nameHandler}/>
+       <p>Name: {name}</p>
     </div>);
-
 
 }
 export default MyComponent
