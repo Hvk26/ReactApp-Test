@@ -39,7 +39,7 @@ function MyComponent(){
        </select>
        <p>Payment Method: {payment}</p>
 
-        <label> <input type="radio" value="Pick Up" checked={method === "Pick Up"} onChange={methodHandler}/>Pick Up</label>
+        <label> <input type="radio" value="Pick Up" checked={method === "Pick Up"} onChange={methodHandler}/>Pick Up</label><br/>
         <label> <input type="radio" value="Delivery" checked={method === "Delivery"} onChange={methodHandler}/>Delivery</label>
         <p>Shipping: {method}</p>
     </div>);
