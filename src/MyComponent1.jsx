@@ -13,7 +13,13 @@ function MyComponent1(){
     // }, [count,color]);
        useEffect(()=>{
         window.addEventListener("resize", sizeHandler);
-       })
+        console.log("Listener added");
+
+        return()=>{
+            window.removeEventListener("resize", sizeHandler);
+            console.log("Listener removed");
+        }
+       },[height, width])
 
     // const addCount =()=>{
     //     setCount(c=> c +1 );
