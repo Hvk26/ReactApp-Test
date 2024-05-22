@@ -6,6 +6,7 @@ function MyComponent(){
     const [name, nameChange] = useState("Guest");
     const [quantity, setQuantity] = useState(1);
     const [payment, setPayment] = useState("");
+    const [method, setMethod] = useState("");
 
 
     // declaring different function
@@ -17,6 +18,9 @@ function MyComponent(){
     }
     const quantityHandler = ()=>{
         setQuantity(event.target.value);
+    }
+    const methodHandler = ()=>{
+        setMethod(event.target.value);
     }
 
     return(<div>
@@ -34,6 +38,10 @@ function MyComponent(){
         <option >COD</option>
        </select>
        <p>Payment Method: {payment}</p>
+
+        <label> <input type="radio" value="Pick Up" checked={method === "Pick Up"} onChange={methodHandler}/>Pick Up</label>
+        <label> <input type="radio" value="Delivery" checked={method === "Delivery"} onChange={methodHandler}/>Delivery</label>
+        <p>Shipping: {method}</p>
     </div>);
 
 }
