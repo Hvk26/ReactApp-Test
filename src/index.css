@@ -11,3 +11,10 @@
     border-radius: 60%;
 }
 
+.clock{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+
