@@ -8,9 +8,14 @@ function MyComponent3(){
         setCar(c=> ({...c, make: event.target.value}));
     }
 
+    const changeModel = ()=>{
+        setCar(c=> ({...c, model: event.target.value}));
+    }
+
     return(
         <>
             <input type="text" value={car.make} onChange={changeMake} />
+            <input type="text" value={car.model} onChange={changeModel} />
             <div>Your favorite car is: {car.make} {car.model} {car.year}</div>
         </>
         
