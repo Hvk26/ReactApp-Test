@@ -4,8 +4,16 @@ function MyComponent3(){
 
     const [car, setCar] = useState({year: 2024, make: "Audi", model: "Q3"})
 
+    const changeMake = ()=>{
+        setCar(c=> ({...c, make: event.target.value}));
+    }
+
     return(
-        <div>Your favorite car is: {car.make} {car.model} {car.year}</div>
+        <>
+            <input type="text" value={car.make} onChange={changeMake} />
+            <div>Your favorite car is: {car.make} {car.model} {car.year}</div>
+        </>
+        
     );
 }
 
